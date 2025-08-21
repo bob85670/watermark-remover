@@ -1,3 +1,5 @@
+## Warning!!! This repository is an experimental fork for learning purpose, not for commercial use. Use at your own risk!!!
+
 # WatermarkRemover-AI
 
 **AI-powered watermark removal tool using Florence-2 and LaMA models**
@@ -45,9 +47,16 @@ This script automatically installs all dependencies and downloads the necessary 
 
 ### Using the Graphical User Interface (GUI)
 
+0. **Build**
+```
+conda create -n py312aiwatermark
+conda activate py312aiwatermark
+pip install PyQt6 transformers iopaint opencv-python-headless
+iopaint download --model lama
+```
+
 1. **Launch the application** with:
 ```
-conda activate py312aiwatermark
 python remwmgui.py
 ```
 
