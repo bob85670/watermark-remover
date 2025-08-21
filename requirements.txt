@@ -1,0 +1,4 @@
+PyQt6 
+transformers 
+iopaint 
+opencv-python-headless

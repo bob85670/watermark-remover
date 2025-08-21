@@ -22,26 +22,10 @@
 * **Dark Mode Support**: The GUI automatically adapts to the system's dark mode settings.
 * **Efficient Resource Management**: Optimized for GPU acceleration using CUDA (optional).
 
-## Quick Install
-
-See the [QUICK_START.md](./QUICK_START.md) file for quick installation and setup.
-
-For detailed installation, refer to the [INSTALLATION_EN.md](./INSTALLATION_EN.md) file.
-
 ### Prerequisites
 
 * Conda/Miniconda installed.
 * CUDA (optional for GPU acceleration; the application also runs well on CPUs).
-
-### One-click installation
-
-Run the PowerShell installation script:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File install_windows.ps1
-```
-
-This script automatically installs all dependencies and downloads the necessary LaMA template.
 
 ## Usage
 
@@ -51,7 +35,7 @@ This script automatically installs all dependencies and downloads the necessary 
 ```
 conda create -n py312aiwatermark
 conda activate py312aiwatermark
-pip install PyQt6 transformers iopaint opencv-python-headless
+pip install -r requirements.txt
 iopaint download --model lama
 ```
 
