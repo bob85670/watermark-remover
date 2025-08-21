@@ -1,7 +1,0 @@
-force_format: PNG
-input_path: /Users/bobbylau/Desktop/test.png
-max_bbox_percent: 100
-mode: single
-output_path: /Users/bobbylau/Desktop/test.png
-overwrite: true
-transparent: true
