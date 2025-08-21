@@ -1,107 +1,107 @@
-# Guide d'Installation de WatermarkRemover-AI pour Windows
+# WatermarkRemover-AI Installation Guide for Windows
 
-Ce guide vous aidera à installer et configurer WatermarkRemover-AI sur votre système Windows.
+This guide will help you install and configure WatermarkRemover-AI on your Windows system.
 
-## Prérequis
+## Prerequisites
 
-1. **Python et Conda** : Vous devez avoir Miniconda ou Anaconda installé sur votre système. Si ce n'est pas le cas, téléchargez et installez Miniconda depuis [le site officiel](https://docs.conda.io/en/latest/miniconda.html).
+1. **Python and Conda**: You must have Miniconda or Anaconda installed on your system. If not, download and install Miniconda from the official website (https://docs.conda.io/en/latest/miniconda.html).
 
-2. **Git** : Si vous souhaitez cloner directement le dépôt, vous aurez besoin de Git. Téléchargez-le depuis [git-scm.com](https://git-scm.com/downloads).
+2. **Git**: If you want to clone the repository directly, you will need Git. Download it from git-scm.com (https://git-scm.com/downloads).
 
-## Méthode 1: Utilisation du script d'installation automatique
+## Method 1: Using the automatic installation script
 
-1. Ouvrez une invite de commande (CMD) dans le dossier du projet.
+1. Open a command prompt (CMD) in the project folder.
 
-2. Exécutez le script d'installation:
-   ```
-   install_windows.bat
-   ```
+2. Run the installation script:
+```
+install_windows.bat
+```
 
-3. Suivez les instructions à l'écran.
+3. Follow the on-screen instructions.
 
-## Méthode 2: Installation manuelle
+## Method 2: Manual Installation
 
-Si le script automatique ne fonctionne pas, suivez ces étapes manuelles:
+If the automatic script doesn't work, follow these manual steps:
 
-1. **Ouvrez une invite de commande** (CMD) ou PowerShell avec les droits administrateur.
+1. Open a Command Prompt (CMD) or PowerShell with administrator rights.
 
-2. **Naviguez vers le dossier du projet**:
-   ```
-   cd chemin\vers\WatermarkRemover-AI
-   ```
+2. Navigate to the project folder:
+```
+cd path\to\WatermarkRemover-AI
+```
 
-3. **Créez l'environnement conda**:
-   ```
-   conda env create -f environment.yml
-   ```
+3. Create the conda environment:
+```
+conda env create -f environment.yml
+```
 
-4. **Activez l'environnement**:
-   ```
-   conda activate py312aiwatermark
-   ```
+4. Activate the environment:
+```
+conda activate py312aiwatermark
+```
 
-5. **Installez les dépendances supplémentaires**:
-   ```
-   pip install PyQt6 transformers iopaint opencv-python-headless
-   ```
+5. Install additional dependencies:
+```
+pip install PyQt6 transformers iopaint opencv-python-headless
+```
 
-6. **Téléchargez le modèle LaMA**:
-   ```
-   iopaint download --model lama
-   ```
+6. Download the LaMA model:
+```
+iopaint download --model lama
+```
 
-## Lancement de l'application
+## Running the application
 
-Après l'installation, vous pouvez lancer l'application:
+After installation, you can run the application:
 
-1. **Activez l'environnement** (si ce n'est pas déjà fait):
-   ```
-   conda activate py312aiwatermark
-   ```
+1. Activate the environment (if it isn't already):
+```
+conda activate py312aiwatermark
+```
 
-2. **Lancez l'application GUI**:
-   ```
-   python remwmgui.py
-   ```
+2. Launch the GUI application:
+```
+python remwmgui.py
+```
 
-## Utilisation
+## Usage
 
-Une fois l'application lancée:
+Once the application is launched:
 
-1. **Choisissez le mode de traitement**:
-   - Traitement d'une image unique
-   - Traitement d'un dossier entier
+1. Select the processing mode:
+- Process a single image
+- Process an entire folder
 
-2. **Sélectionnez les chemins d'entrée et de sortie**.
+2. Select the input and output paths.
 
-3. **Configurez les options**:
-   - Activez l'écrasement des fichiers existants si nécessaire
-   - Définissez si les zones de filigrane doivent être rendues transparentes
-   - Ajustez la taille maximale de la boîte englobante pour la détection
-   - Sélectionnez le format de sortie (PNG, WEBP, JPG ou format d'origine)
+3. Configure the options:
+- Enable overwriting of existing files if necessary
+- Set whether watermark areas should be made transparent
+- Adjust the maximum bounding box size for detection
+- Select the output format (PNG, WEBP, JPG, or original format)
 
-4. **Cliquez sur "Start" pour commencer le traitement**.
+4. Click "Start" to begin processing.
 
-## Problèmes courants et solutions
+## Common Problems and Solutions
 
-### Problème: "Conda n'est pas reconnu comme une commande interne ou externe"
-**Solution**: Assurez-vous que Conda est correctement installé et que son chemin est ajouté à la variable d'environnement PATH.
+### Problem: "Conda is not recognized as an internal or external command"
+**Solution**: Ensure that Conda is properly installed and that its path is added to the PATH environment variable.
 
-### Problème: Échec lors de l'installation des dépendances
-**Solution**: Essayez d'exécuter les commandes d'installation individuellement et vérifiez les messages d'erreur spécifiques.
+### Problem: Failure to install dependencies
+**Solution**: Try running the installation commands individually and check for specific error messages.
 
-### Problème: L'application ne démarre pas
-**Solution**: Vérifiez que l'environnement Python est correctement activé avec `conda activate py312aiwatermark`.
+### Problem: The application fails to start
+**Solution**: Ensure that the Python environment is properly activated with `conda activate py312aiwatermark`.
 
-### Problème: Le modèle LaMA ne se télécharge pas
-**Solution**: Assurez-vous d'avoir une connexion Internet stable et réessayez avec la commande `iopaint download --model lama`.
+### Problem: The LaMA model fails to download
+**Solution**: Ensure you have a stable internet connection and try again with the `iopaint download --model lama` command.
 
 ## Support
 
-Si vous rencontrez des problèmes, vous pouvez:
-- Ouvrir une issue sur le [dépôt GitHub](https://github.com/D-Ogi/WatermarkRemover-AI)
-- Consulter les discussions existantes pour voir si quelqu'un a déjà rencontré le même problème
+If you encounter any problems, you can:
+- Open an issue on the [GitHub repository](https://github.com/D-Ogi/WatermarkRemover-AI)
+- Check existing discussions to see if anyone has already encountered the same problem
 
 ---
 
-Profitez de votre nouvel outil de suppression de filigranes alimenté par l'IA! 
+Enjoy your new AI-powered watermark removal tool!

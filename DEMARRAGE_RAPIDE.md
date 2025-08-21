@@ -1,57 +1,56 @@
-# WatermarkRemover-AI - Guide de démarrage rapide
+# WatermarkRemover-AI - Quick Start Guide
 
-## Installation rapide sur Windows
+## Quick Installation on Windows
 
-1. **Prérequis** : Installez [Miniconda](https://docs.conda.io/en/latest/miniconda.html) si ce n'est pas déjà fait.
+1. **Prerequisites**: Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) if you haven't already.
 
-2. **Installez l'application** :
-   - Ouvrez PowerShell en tant qu'administrateur
-   - Naviguez vers le dossier du projet
-   - Exécutez la commande : 
-     ```
-     powershell -ExecutionPolicy Bypass -File install_windows.ps1
-     ```
+2. **Install the application**:
+- Open PowerShell as an administrator
+- Navigate to the project folder
+- Run the command:
+```
+powershell -ExecutionPolicy Bypass -File install_windows.ps1
+```
 
-3. **Alternative** : Installation manuelle
-   ```powershell
-   # Créer l'environnement conda
-   conda env create -f environment.yml
-   
-   # Activer l'environnement
-   conda activate py312aiwatermark
-   
-   # Installer les dépendances supplémentaires
-   pip install PyQt6 transformers iopaint opencv-python-headless
-   
-   # Télécharger le modèle LaMA
-   iopaint download --model lama
-   ```
+3. **Alternative**: Manual installation
+```powershell
+# Create the conda environment
+conda env create -f environment.yml
 
-## Lancement de l'application
+# Activate the environment
+conda activate py312aiwatermark
 
-1. Ouvrez PowerShell
-2. Activez l'environnement : `conda activate py312aiwatermark`
-3. Lancez l'application : `python remwmgui.py`
+# Install additional dependencies
+pip install PyQt6 transformers iopaint opencv-python-headless
 
-## Utilisation basique
+# Download the LaMA model
+iopaint download --model lama
+```
 
-1. **Mode** : Choisissez entre le traitement d'une image unique ou d'un dossier entier.
-2. **Chemins** : Définissez les chemins d'entrée et de sortie.
-3. **Options** :
-   - **Overwrite Existing Files** : Écraser les fichiers existants.
-   - **Make Watermark Transparent** : Rendre les zones de filigrane transparentes.
-   - **Max BBox Percent** : Taille maximale de la zone de filigrane (en % de l'image).
-   - **Format de sortie** : PNG, WEBP, JPG ou conserver le format d'origine.
-4. **Start** : Lancez le traitement.
+## Launching the application
 
-## Conseils d'utilisation
+1. Open PowerShell
+2. Activate the environment: `conda activate py312aiwatermark`
+3. Launch the application: `python remwmgui.py`
 
-- Pour de meilleurs résultats, utilisez le format PNG qui supporte la transparence.
-- Si vous traitez de grandes images, utilisez une valeur plus faible pour Max BBox Percent.
-- L'option transparence est particulièrement utile pour préserver les détails de l'image.
+## Basic Usage
 
-## En cas de problème
+1. **Mode**: Choose between processing a single image or an entire folder.
+2. **Paths**: Set the input and output paths.
+3. **Options**:
+- **Overwrite Existing Files**: Overwrite existing files.
+- **Make Watermark Transparent**: Make watermark areas transparent.
+- **Max BBox Percent**: Maximum size of the watermark area (as a percentage of the image).
+- **Output Format**: PNG, WEBP, JPG, or keep the original format.
+4. **Start**: Start processing.
 
-- Vérifiez que tous les prérequis sont installés correctement.
-- Assurez-vous que l'environnement conda est activé.
-- Consultez le fichier `INSTALLATION_FR.md` pour des instructions plus détaillées. 
+## Usage Tips
+
+- For best results, use the PNG format, which supports transparency.
+- If processing large images, use a lower value for Max BBox Percent. - The transparency option is particularly useful for preserving image details.
+
+## Troubleshooting
+
+- Check that all prerequisites are installed correctly.
+- Ensure the conda environment is enabled.
+- See the `INSTALLATION_EN.md` file for more detailed instructions.
